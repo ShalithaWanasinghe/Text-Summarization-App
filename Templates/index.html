@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Summarization Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; 
+            color: #ffd700; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffd700; 
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #000; 
+            color: #fff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ddd; 
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd; 
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        input[type="submit"] {
+            background-color: #ffd700; 
+            color: #000; 
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffcc00; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalized Summarization Agent</h1>
+    <form action="/summarize" method="post">
+        <label for="article">Article:</label>
+        <textarea id="article" name="article" rows="4" cols="50" placeholder="Enter your article here..."></textarea><br>
+
+        <label for="summary_length">Preferred Summary Length:</label>
+        <input type="number" id="summary_length" name="summary_length" value="50" min="1"><br>
+
+        <label for="style">Preferred Style:</label>
+        <select id="style" name="style">
+            <option value="objective">Objective</option>
+            <option value="factual">Factual</option>
+            <option value="humorous">Humorous</option>
+        </select><br>
+
+        <input type="submit" value="Generate Summary">
+    </form>
+</body>
+</html>

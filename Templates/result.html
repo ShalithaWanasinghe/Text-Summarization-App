@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black */
+            color: #ffd700; /* Yellow */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            color: #ffd700; /* Yellow */
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #fff; /* White */
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Article:</h2>
+        <p>{{ article }}</p>
+
+        <h2>Personalized Summary:</h2>
+        <p>{{ personalized_summary }}</p>
+
+        <h2>Baseline Summary:</h2>
+        <p>{{ baseline_summary }}</p>
+    </div>
+</body>
+</html>
